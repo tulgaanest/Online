@@ -1,0 +1,77 @@
+<html>
+   <head>   
+      <script type = "text/javascript">
+      var a = 0;
+      function plus(){
+         a++;
+         document.getElementById("counter").innerHTML = a;
+      }
+      function minus(){
+         a--;
+         document.getElementById("counter").innerHTML = a;
+      }
+      function getwords() {
+         text = words.value;
+         document.getElementById("para").innerHTML += '<p>'+text
+         document.getElementById("words").value = "enter"
+      }
+      </script>
+      <style>
+         .button {
+            background-color: white;
+            border: 1px solid black;
+            color : black;
+            padding: 5px 30px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            margin: 2px 2px;
+            cursor: pointer;
+            border-radius: 4px;
+         }
+         .label {
+            background-color: white;
+            border: 1px solid black;
+            color : black;
+            padding: 10px 40px;
+            text-decoration: none;
+            display: inline-block;
+            margin: 2px 2px;
+            cursor: pointer;
+            border-radius: 4px;
+         }
+      </style>
+   </head>
+   <body>  
+      <br>
+      <br>  
+      <div text-align="center" >
+         <button class="button" onclick="minus()" >
+            <H1>
+               -
+            </H1>
+         </button>
+         
+         <label class="label" id="counter">
+            <H1>
+               <b>
+                  0
+               </b>
+            </H1>
+         </label>
+         <button class="button" onclick="plus()" >
+            <H1>
+               +
+            </H1>
+         </button>
+      </div>  
+      <br>
+      <br>
+      <form text-align="center">
+         <textarea id="words" rows="6" cols="40"></textarea>
+         <input type="button" onclick="getwords()" value="Enter" /> <br>
+         <p id="para"></p>
+      </form>
+   </body>
+   </html>
+
